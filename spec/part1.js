@@ -1,11 +1,12 @@
+/* eslint-disable no-undef,no-unused-vars */  
 (function() {
   'use strict';
 
   describe('Part I', function() {
 
     describe('identity', function() {
-      checkForNativeMethods(function() {
-        _.identity(1);
+      checkForNativeMethods(function(arg) {
+        _.identity(arg);
       });
 
       it('should return whatever value is passed into it', function() {
@@ -102,7 +103,7 @@
          * that don't mutate their inputs!
          */
 
-        expect(input).to.eql([1,2,3,4,5])
+        expect(input).to.eql([1,2,3,4,5]); 
       });
 
       it(' should iterate over arrays and provide access to each value', function() {
@@ -218,7 +219,7 @@
 
     describe('indexOf', function() {
       checkForNativeMethods(function() {
-        _.indexOf([10, 20, 30, 40], 40)
+        _.indexOf([10, 20, 30, 40], 40); 
       });
 
       it('should find 40 in the list', function() {
@@ -249,7 +250,7 @@
     describe('filter', function() {
       checkForNativeMethods(function() {
         var isEven = function(num) { return num % 2 === 0; };
-        _.filter([1, 2, 3, 4], isEven)
+        _.filter([1, 2, 3, 4], isEven); 
       });
 
       it('should return all even numbers in an array', function() {
@@ -278,7 +279,7 @@
     describe('reject', function() {
       checkForNativeMethods(function() {
         var isEven = function(num) { return num % 2 === 0; };
-        _.reject([1, 2, 3, 4, 5, 6], isEven)
+        _.reject([1, 2, 3, 4, 5, 6], isEven); 
       });
 
       it('should reject all even numbers', function() {
@@ -306,7 +307,7 @@
 
     describe('uniq', function() {
       checkForNativeMethods(function() {
-        _.uniq([1, 2, 3, 4])
+        _.uniq([1, 2, 3, 4]); 
       });
 
       it('should not mutate the input array', function() {
@@ -336,7 +337,7 @@
          * that don't mutate their inputs!
          */
 
-        expect(input).to.eql([1,2,3,4,5])
+        expect(input).to.eql([1,2,3,4,5]); 
       });
 
       it('should return all unique values contained in an unsorted array', function() {
@@ -364,7 +365,7 @@
       checkForNativeMethods(function() {
         _.map([1, 2, 3, 4], function(num) {
           return num * 2;
-        })
+        }); 
       });
 
       it('should not mutate the input array', function() {
@@ -394,7 +395,7 @@
          * that don't mutate their inputs!
          */
 
-        expect(input).to.eql([1,2,3,4,5])
+        expect(input).to.eql([1,2,3,4,5]); 
       });
 
       it('should apply a function to every value in an array', function() {
@@ -449,7 +450,7 @@
     describe('reduce', function() {
       checkForNativeMethods(function() {
         var add = function(tally, item) {return tally + item; };
-        _.reduce([1, 2, 3, 4], add)
+        _.reduce([1, 2, 3, 4], add); 
       });
 
       it('should be a function', function() {
@@ -488,7 +489,7 @@
          * that don't mutate their inputs!
          */
 
-        expect(input).to.eql([1,2,3,4,5])
+        expect(input).to.eql([1,2,3,4,5]); 
       });
 
       it('should invoke the iterator function with arguments (memo, item) in that order', function() {
